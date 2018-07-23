@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity"
+        <activity
+            android:name=".SplashActivity"
             android:theme="@style/AppTheme.FullScreen.Launch">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -25,9 +26,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
-                  android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".ui.AirHockeyActivity">
         </activity>
@@ -49,6 +51,10 @@
         </service>
 
         <activity android:name=".ui.ShatterAnimActivity">
+        </activity>
+        <activity android:name=".MagicActivity">
+        </activity>
+        <activity android:name=".ui.EntryAnimActivity">
         </activity>
     </application>
 

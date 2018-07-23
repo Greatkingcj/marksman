@@ -19,4 +19,12 @@
     <!--white-->
     <color name="white_ffffff">#ffffff</color>
     <color name="white_00ffffff">#00ffffff</color>
+
+    <color name="color_transparent">#00000000</color>
+    <color name="color_eee">#EEE</color>
+    <color name="color_ddd">#DDD</color>
+    <color name="color_ccc">#CCC</color>
+    <color name="color_bbb">#BBB</color>
+    <color name="color_333">#333</color>
+    <color name="color_666">#666</color>
 </resources>

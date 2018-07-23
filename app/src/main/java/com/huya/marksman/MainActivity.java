@@ -12,6 +12,7 @@ import android.view.View;
 import com.huya.marksman.renders.ParticlesRenderer;
 import com.huya.marksman.renders.StarryRenderer;
 import com.huya.marksman.ui.AirHockeyActivity;
+import com.huya.marksman.ui.EntryAnimActivity;
 import com.huya.marksman.ui.ParticlesActivity;
 import com.huya.marksman.ui.ShatterAnimActivity;
 
@@ -64,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void  gotoThird(View view) {
         startActivity(new Intent(this, ShatterAnimActivity.class));
+    }
+
+    public void  gotoFour(View view) {
+        startActivity(new Intent(this, EntryAnimActivity.class));
     }
 
     @Override
