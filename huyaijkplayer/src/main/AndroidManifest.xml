@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.huya.huyaijkplayer">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activitys.MainActivity">
+        </activity>
+        <activity android:name=".activitys.VideoActivity">
+        </activity>
+        <activity android:name=".activitys.SurfaceViewActivity">
+        </activity>
+        <activity
+            android:name=".activitys.HuyaVideoViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+        <activity android:name=".activitys.OpenGlActivity">
+        </activity>
+        <activity android:name=".activitys.CameraActivity">
+        </activity>
+        <activity android:name=".activitys.Camera1Activity">
+        </activity>
+        <activity android:name=".activitys.CameraBasicActivity">
+        </activity>
+        <activity android:name=".activitys.CameraAnimActivity">
+        </activity>
+        <activity android:name=".activitys.CameraBeauActivity">
+        </activity>
+        <activity android:name=".activitys.VideoListActivity">
+        </activity>
+        <activity android:name=".activitys.AnimatorActivity">
+        </activity>
+    </application>
+
+</manifest>

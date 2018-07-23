@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_huya_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="测试HuyaVideoView"/>
+
+    <Button
+        android:id="@+id/btn_view_list"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="测试播放列表"/>
+
+    <Button
+        android:id="@+id/btn_surface"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="测试直接使用surfaceview"/>
+
+    <Button
+        android:id="@+id/btn_opengles"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="测试OpenGl ES"/>
+
+    <Button
+        android:id="@+id/btn_camera"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="测试Camera预览"/>
+
+    <Button
+        android:id="@+id/btn_camera2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="测试另外的Camera"/>
+
+    <Button
+        android:id="@+id/btn_like"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="测试点赞动画"/>
+
+    <ListView
+        android:id="@+id/lv_play_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+
+</LinearLayout>
