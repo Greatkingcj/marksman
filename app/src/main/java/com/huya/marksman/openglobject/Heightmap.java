@@ -3,8 +3,8 @@ package com.huya.marksman.openglobject;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 
-import com.huya.marksman.data.IndexBuffer;
-import com.huya.marksman.data.VertexBuffer;
+import com.huya.marksman.openglobject.bufferobject.IndexBuffer;
+import com.huya.marksman.openglobject.bufferobject.VertexBuffer;
 import com.huya.marksman.programs.HeightmapShaderProgram;
 import com.huya.marksman.util.openglutil.Geometry;
 

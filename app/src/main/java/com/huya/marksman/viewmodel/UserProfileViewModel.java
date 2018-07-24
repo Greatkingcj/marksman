@@ -3,8 +3,8 @@ package com.huya.marksman.viewmodel;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.ViewModel;
 
-import com.huya.marksman.repository.UserRepository;
-import com.huya.marksman.vo.User;
+import com.huya.marksman.data.userdao.UserRepository;
+import com.huya.marksman.data.userdao.User;
 
 import javax.inject.Inject;
 
@@ -26,7 +26,6 @@ public class UserProfileViewModel extends ViewModel{
         if (this.user != null) {
             return;
         }
-        user = userRepo.getUser(userId);
     }
 
     public LiveData<User> getUser() {

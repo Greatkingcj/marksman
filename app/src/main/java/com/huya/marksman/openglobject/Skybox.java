@@ -1,6 +1,6 @@
 package com.huya.marksman.openglobject;
 
-import com.huya.marksman.data.VertexArray;
+import com.huya.marksman.openglobject.bufferobject.VertexArray;
 import com.huya.marksman.programs.SkyboxShaderProgram;
 
 import java.nio.ByteBuffer;

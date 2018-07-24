@@ -2,7 +2,7 @@ package com.huya.marksman.openglobject;
 
 import android.graphics.Color;
 
-import com.huya.marksman.data.VertexArray;
+import com.huya.marksman.openglobject.bufferobject.VertexArray;
 import com.huya.marksman.programs.ParticleShaderProgram;
 import com.huya.marksman.util.openglutil.Geometry;
 

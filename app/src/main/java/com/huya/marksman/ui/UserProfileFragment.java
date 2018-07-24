@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 import com.huya.marksman.R;
 import com.huya.marksman.viewmodel.UserProfileViewModel;
-import com.huya.marksman.vo.User;
+import com.huya.marksman.data.userdao.User;
 
 /**
  * A simple {@link Fragment} subclass.

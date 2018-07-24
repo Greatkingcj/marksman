@@ -1,4 +1,4 @@
-package com.huya.marksman.data;
+package com.huya.marksman.openglobject.bufferobject;
 
 import com.huya.marksman.util.openglutil.Geometry;
 

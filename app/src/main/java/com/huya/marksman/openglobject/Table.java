@@ -1,6 +1,6 @@
 package com.huya.marksman.openglobject;
 
-import com.huya.marksman.data.VertexArray;
+import com.huya.marksman.openglobject.bufferobject.VertexArray;
 import com.huya.marksman.programs.TextureShaderProgram;
 
 import static android.opengl.GLES20.GL_TRIANGLE_FAN;

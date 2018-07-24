@@ -4,8 +4,8 @@ import android.arch.lifecycle.LiveData;
 
 import com.huya.marksman.util.rxretrofit.OkHttpHelper;
 import com.huya.marksman.util.rxretrofit.RxThreadComposeUtil;
-import com.huya.marksman.vo.Repo;
-import com.huya.marksman.vo.User;
+import com.huya.marksman.data.repodao.Repo;
+import com.huya.marksman.data.userdao.User;
 
 import java.util.List;
 
