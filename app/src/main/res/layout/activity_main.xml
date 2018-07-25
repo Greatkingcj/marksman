@@ -14,10 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:src="@color/white_00ffffff"/>
+
         <TextView
             android:id="@+id/sample_text"
             android:layout_width="match_parent"
@@ -61,6 +58,18 @@
             android:layout_marginTop="20dp"
             android:onClick="gotoFour"
             android:text="entryAnim"
+            android:textColor="@color/white_ffffff"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/normal_bg"/>
+
+        <TextView
+            android:id="@+id/sample_five"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:onClick="showUsers"
+            android:text="showUsers"
             android:textColor="@color/white_ffffff"
             android:textSize="20sp"
             android:gravity="center"

@@ -69,6 +69,7 @@ public class UserRepository implements UserDataSource{
 
                 @Override
                 public void onDataNotAvailable() {
+                    callback.onDataNotAvailable();
                     //getusersFromRemoteDataSource(callback);
                 }
             });
@@ -104,6 +105,7 @@ public class UserRepository implements UserDataSource{
 
             @Override
             public void onDataNotAvailable() {
+                callback.onDataNotAvailable();
                 //server 处理
             }
         });

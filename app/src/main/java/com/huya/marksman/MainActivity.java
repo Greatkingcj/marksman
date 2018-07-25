@@ -15,6 +15,7 @@ import com.huya.marksman.ui.AirHockeyActivity;
 import com.huya.marksman.ui.EntryAnimActivity;
 import com.huya.marksman.ui.ParticlesActivity;
 import com.huya.marksman.ui.ShatterAnimActivity;
+import com.huya.marksman.ui.user.UserListActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -69,6 +70,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void  gotoFour(View view) {
         startActivity(new Intent(this, EntryAnimActivity.class));
+    }
+
+    public void  showUsers(View view) {
+        startActivity(new Intent(this, UserListActivity.class));
     }
 
     @Override
