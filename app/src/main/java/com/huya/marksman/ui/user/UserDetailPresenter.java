@@ -8,16 +8,16 @@ import com.huya.marksman.data.userdao.UserRepository;
  * Created by charles on 2018/7/25.
  */
 
-public class UserDetialPresenter implements UserDetialContract.Presenter{
+public class UserDetailPresenter implements UserDetailContract.Presenter{
 
 
-    UserDetialContract.View userView;
+    UserDetailContract.View userView;
 
     UserRepository userRepository;
 
     String userId;
 
-    public UserDetialPresenter(UserDetialContract.View userView, UserRepository userRepository, String userId) {
+    public UserDetailPresenter(UserDetailContract.View userView, UserRepository userRepository, String userId) {
         this.userView = userView;
         this.userRepository = userRepository;
         this.userId = userId;

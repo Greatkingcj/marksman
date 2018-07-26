@@ -12,29 +12,27 @@ import android.widget.TextView;
 import com.huya.marksman.R;
 import com.huya.marksman.data.userdao.User;
 
-import java.util.List;
-
 /**
  * A simple {@link Fragment} subclass.
  */
-public class UserDetialFragment extends Fragment implements UserDetialContract.View{
+public class UserDetailFragment extends Fragment implements UserDetailContract.View{
 
     private static final String ARGUMENT_USER_ID = "TASK_ID";
-    private UserDetialContract.Presenter presenter;
+    private UserDetailContract.Presenter presenter;
     private View root;
     private TextView name;
     private TextView email;
     private TextView phone;
 
 
-    public UserDetialFragment() {
+    public UserDetailFragment() {
         // Required empty public constructor
     }
 
-    public static UserDetialFragment newInstance(String userId) {
+    public static UserDetailFragment newInstance(String userId) {
         Bundle arguments = new Bundle();
         arguments.putString(ARGUMENT_USER_ID, userId);
-        UserDetialFragment fragment =  new UserDetialFragment();
+        UserDetailFragment fragment =  new UserDetailFragment();
         fragment.setArguments(arguments);
         return fragment;
     }
@@ -62,7 +60,7 @@ public class UserDetialFragment extends Fragment implements UserDetialContract.V
     }
 
     @Override
-    public void setPresenter(UserDetialContract.Presenter presenter) {
+    public void setPresenter(UserDetailContract.Presenter presenter) {
         this.presenter = presenter;
     }
 

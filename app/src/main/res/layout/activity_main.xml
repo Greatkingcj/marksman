@@ -74,5 +74,17 @@
             android:textSize="20sp"
             android:gravity="center"
             android:background="@drawable/normal_bg"/>
+
+        <TextView
+            android:id="@+id/sample_six"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:onClick="showUsersAAC"
+            android:text="showUsersAAC"
+            android:textColor="@color/white_ffffff"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/normal_bg"/>
     </LinearLayout>
 </FrameLayout>

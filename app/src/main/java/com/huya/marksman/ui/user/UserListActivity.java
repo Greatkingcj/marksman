@@ -9,6 +9,7 @@ import com.huya.marksman.data.userdao.UserDao;
 import com.huya.marksman.data.userdao.UserDataSource;
 import com.huya.marksman.data.userdao.UserRepository;
 import com.huya.marksman.data.userdao.UsersLocalDataSource;
+import com.huya.marksman.di.Injection;
 import com.huya.marksman.util.ActivityUtils;
 import com.huya.marksman.util.AppExecutors;
 
@@ -32,9 +33,6 @@ public class UserListActivity extends AppCompatActivity {
             );
         }
 
-        UserDatabase userDatabase = UserDatabase.getInstance(this);
-        UsersLocalDataSource usersLocalDataSource = UsersLocalDataSource.getInstance(new AppExecutors(), userDatabase.userDao());
-        UserRepository repository = UserRepository.getInstance(usersLocalDataSource);
-        userListPresenter = new UserListPresenter(repository, userListFragment);
+        userListPresenter = new UserListPresenter(Injection.provideUserRepository(this), userListFragment);
     }
 }

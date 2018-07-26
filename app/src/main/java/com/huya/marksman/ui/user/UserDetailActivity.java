@@ -10,10 +10,10 @@ import com.huya.marksman.data.userdao.UsersLocalDataSource;
 import com.huya.marksman.util.ActivityUtils;
 import com.huya.marksman.util.AppExecutors;
 
-public class UserDetialActivity extends AppCompatActivity {
+public class UserDetailActivity extends AppCompatActivity {
 
     public static final String EXTRA_USER_ID = "USER_ID";
-    UserDetialContract.Presenter presenter;
+    UserDetailContract.Presenter presenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,11 +22,11 @@ public class UserDetialActivity extends AppCompatActivity {
         // Get the requested task id
         String userId = getIntent().getStringExtra(EXTRA_USER_ID);
 
-        UserDetialFragment userDetialFragment = (UserDetialFragment) getSupportFragmentManager()
+        UserDetailFragment userDetialFragment = (UserDetailFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.contentFrame);
 
         if (userDetialFragment == null) {
-           userDetialFragment = UserDetialFragment.newInstance(userId);
+           userDetialFragment = UserDetailFragment.newInstance(userId);
             ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),
                     userDetialFragment, R.id.contentFrame);
         }
@@ -35,6 +35,6 @@ public class UserDetialActivity extends AppCompatActivity {
         UsersLocalDataSource usersLocalDataSource = UsersLocalDataSource.getInstance(new AppExecutors(), userDatabase.userDao());
         UserRepository repository = UserRepository.getInstance(usersLocalDataSource);
 
-        presenter = new UserDetialPresenter(userDetialFragment, repository, userId);
+        presenter = new UserDetailPresenter(userDetialFragment, repository, userId);
     }
 }

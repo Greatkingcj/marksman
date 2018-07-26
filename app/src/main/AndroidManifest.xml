@@ -58,7 +58,11 @@
         </activity>
         <activity android:name=".ui.user.UserListActivity">
         </activity>
-        <activity android:name=".ui.user.UserDetialActivity">
+        <activity android:name=".ui.user.UserDetailActivity">
+        </activity>
+        <activity android:name=".ui.user.architecturecomponents.UserListAACActivity">
+        </activity>
+        <activity android:name=".ui.user.architecturecomponents.UserDetailAACActivity">
         </activity>
     </application>
 

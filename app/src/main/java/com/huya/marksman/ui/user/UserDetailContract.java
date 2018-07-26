@@ -4,14 +4,12 @@ import com.huya.marksman.BasePresenter;
 import com.huya.marksman.BaseView;
 import com.huya.marksman.data.userdao.User;
 
-import java.util.List;
-
 /**
  * Created by charles on 2018/7/25.
  */
 
-public class UserDetialContract {
-    interface View extends BaseView<UserDetialContract.Presenter> {
+public class UserDetailContract {
+    interface View extends BaseView<UserDetailContract.Presenter> {
         void showUser(User user);
     }
 
