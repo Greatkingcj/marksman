@@ -17,6 +17,7 @@ import com.huya.marksman.ui.ParticlesActivity;
 import com.huya.marksman.ui.ShatterAnimActivity;
 import com.huya.marksman.ui.user.UserListActivity;
 import com.huya.marksman.ui.user.architecturecomponents.UserListAACActivity;
+import com.huya.marksman.ui.webview.WebViewActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -79,6 +80,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void  showUsersAAC(View view) {
         startActivity(new Intent(this, UserListAACActivity.class));
+    }
+
+    public void  showWebView(View view) {
+        startActivity(new Intent(this, WebViewActivity.class));
     }
 
     @Override

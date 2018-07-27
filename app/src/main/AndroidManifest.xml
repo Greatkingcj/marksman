@@ -64,6 +64,9 @@
         </activity>
         <activity android:name=".ui.user.architecturecomponents.UserDetailAACActivity">
         </activity>
+        <activity android:name=".ui.webview.WebViewActivity"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
     </application>
 
 </manifest>

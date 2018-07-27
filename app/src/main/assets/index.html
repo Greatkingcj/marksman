@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebView</title>
+    <style type="text/css">
+        body {
+            background: aquamarine;
+        }
+        .btn {
+            line-height: 40px;
+            width: 60px;
+            margin: 10px;
+            background: bisque;
+        }
+    </style>
+</head>
+<body>
+<h2>WebView</h2>
+<div><span>请输入要传递的值：</span><input type="text" id="input"></div>
+<div id="btn" class="btn"><span>点我</span></span></div>
+
+<script type="text/javascript">
+    var btnEle = document.getElementById("btn");
+    var inputEle = document.getElementById("input");
+    btnEle.addEventListener("click", function () {
+        var str = inputEle.value;
+        if ( window.MaskScript ) {
+            MaskScript.setValue(str);
+        }else {
+            alert("not found!")
+        }
+    });
+
+    var remote = function (str) {
+        inputEle.value = str;
+    }
+</script>
+</body>
+</html>

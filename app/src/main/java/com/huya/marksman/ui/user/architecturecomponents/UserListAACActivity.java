@@ -1,5 +1,6 @@
 package com.huya.marksman.ui.user.architecturecomponents;
 
+import android.arch.lifecycle.LifecycleObserver;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
