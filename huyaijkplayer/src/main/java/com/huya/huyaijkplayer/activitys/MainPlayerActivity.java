@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 import com.huya.huyaijkplayer.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainPlayerActivity extends AppCompatActivity {
     private ListView mFileListView;
     private SampleMediaAdapter mAdapter;
     private Button mSurface;
@@ -30,14 +30,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_player_main);
 
         mHuyaView = findViewById(R.id.btn_huya_view);
         mHuyaView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, HuyaVideoViewActivity.class);
-                MainActivity.this.startActivity(intent);
+                Intent intent = new Intent(MainPlayerActivity.this, HuyaVideoViewActivity.class);
+                MainPlayerActivity.this.startActivity(intent);
             }
         });
 
@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         mListView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, VideoListActivity.class);
-                MainActivity.this.startActivity(intent);
+                Intent intent = new Intent(MainPlayerActivity.this, VideoListActivity.class);
+                MainPlayerActivity.this.startActivity(intent);
             }
         });
 
@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
         mSurface.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SurfaceViewActivity.class);
-                MainActivity.this.startActivity(intent);
+                Intent intent = new Intent(MainPlayerActivity.this, SurfaceViewActivity.class);
+                MainPlayerActivity.this.startActivity(intent);
             }
         });
 
@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
         mOpenGLES.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, OpenGlActivity.class);
-                MainActivity.this.startActivity(intent);
+                Intent intent = new Intent(MainPlayerActivity.this, OpenGlActivity.class);
+                MainPlayerActivity.this.startActivity(intent);
             }
         });
 
@@ -72,8 +72,8 @@ public class MainActivity extends AppCompatActivity {
         mCamera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CameraActivity.class);
-                MainActivity.this.startActivity(intent);
+                Intent intent = new Intent(MainPlayerActivity.this, CameraActivity.class);
+                MainPlayerActivity.this.startActivity(intent);
             }
         });
 
@@ -81,8 +81,8 @@ public class MainActivity extends AppCompatActivity {
         mCamera2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Camera1Activity.class);
-                MainActivity.this.startActivity(intent);
+                Intent intent = new Intent(MainPlayerActivity.this, Camera1Activity.class);
+                MainPlayerActivity.this.startActivity(intent);
             }
         });
 
@@ -90,8 +90,8 @@ public class MainActivity extends AppCompatActivity {
         mLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AnimatorActivity.class);
-                MainActivity.this.startActivity(intent);
+                Intent intent = new Intent(MainPlayerActivity.this, AnimatorActivity.class);
+                MainPlayerActivity.this.startActivity(intent);
             }
         });
 
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                 SampleMediaItem item = mAdapter.getItem(position);
                 String name = item.mName;
                 String url = item.mUrl;
-                VideoActivity.intentTo(MainActivity.this, url, name);
+                VideoActivity.intentTo(MainPlayerActivity.this, url, name);
             }
         });
         mAdapter.addItem("http://9890.vod.myqcloud.com/9890_4e292f9a3dd011e6b4078980237cc3d3.f30.mp4", "深圳环保");

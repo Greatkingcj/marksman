@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.huya.huyaijkplayer.activitys.MainPlayerActivity;
 import com.huya.marksman.renders.ParticlesRenderer;
 import com.huya.marksman.renders.StarryRenderer;
 import com.huya.marksman.ui.AirHockeyActivity;
@@ -84,6 +85,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void  showWebView(View view) {
         startActivity(new Intent(this, WebViewActivity.class));
+    }
+
+    public void  showPlayer(View view) {
+        startActivity(new Intent(this, MainPlayerActivity.class));
     }
 
     @Override
