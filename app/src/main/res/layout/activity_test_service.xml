@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.huya.marksman.ui.test.TestServiceActivity">
+    <TextView
+        android:id="@+id/tv_result_from_service"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Service"/>
+
+    <Button
+        android:id="@+id/bt_test_one"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="testContentProvider"
+        android:textAllCaps="false"
+        android:text="testContentProvider"
+        />
+
+    <Button
+        android:id="@+id/bt_test_two"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="testAIDL"
+        android:textAllCaps="false"
+        android:text="testAIDL"
+        />
+
+    <Button
+        android:id="@+id/bt_test_three"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="testBinder"
+        android:textAllCaps="false"
+        android:text="testBinder"
+        />
+
+</LinearLayout>

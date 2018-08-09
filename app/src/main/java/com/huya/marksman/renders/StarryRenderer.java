@@ -87,16 +87,20 @@ public class StarryRenderer implements GLSurfaceView.Renderer{
         GLES20.glEnable(GLES20.GL_DEPTH_TEST);
 
         // Position the eye in front of the origin.
+        //将眼睛放在原点前面。
         final float eyeX =  0.0f;
         final float eyeY =  0.0f;
         final float eyeZ =  0.0f;
 
         // We are looking toward the distance
+        //我们正望向远方
+
         final float lookX =  0.0f;
         final float lookY =  0.0f;
         final float lookZ =  1.0f;
 
         // Set our up vector. This is where our head would be pointing were we holding the camera.
+        //设置我们的向量。 这是我们拿着相机的头部指向的地方。
         final float upX = 0.0f;
         final float upY = 1.0f;
         final float upZ = 0.0f;

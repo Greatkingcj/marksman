@@ -1,4 +1,4 @@
-package com.huya.marksman.wallpaper;
+package com.huya.marksman.service.wallpaper;
 
 import android.app.ActivityManager;
 import android.content.Context;

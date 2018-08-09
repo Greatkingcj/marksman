@@ -25,7 +25,7 @@ import android.view.View.OnTouchListener;
 import android.widget.Toast;
 
 import com.huya.marksman.renders.ParticlesRenderer;
-import com.huya.marksman.wallpaper.GLWallpaperService;
+import com.huya.marksman.service.wallpaper.GLWallpaperService;
 
 /**
  * @author charles

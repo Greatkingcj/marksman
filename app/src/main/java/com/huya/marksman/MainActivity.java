@@ -16,9 +16,16 @@ import com.huya.marksman.ui.AirHockeyActivity;
 import com.huya.marksman.ui.EntryAnimActivity;
 import com.huya.marksman.ui.ParticlesActivity;
 import com.huya.marksman.ui.ShatterAnimActivity;
+import com.huya.marksman.ui.test.TestActivity;
 import com.huya.marksman.ui.user.UserListActivity;
 import com.huya.marksman.ui.user.architecturecomponents.UserListAACActivity;
 import com.huya.marksman.ui.webview.WebViewActivity;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.Map;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -75,16 +82,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, EntryAnimActivity.class));
     }
 
-    public void  showUsers(View view) {
-        startActivity(new Intent(this, UserListActivity.class));
-    }
-
-    public void  showUsersAAC(View view) {
-        startActivity(new Intent(this, UserListAACActivity.class));
-    }
-
-    public void  showWebView(View view) {
-        startActivity(new Intent(this, WebViewActivity.class));
+    public void  testSomething(View view) {
+        startActivity(new Intent(this, TestActivity.class));
     }
 
     public void  showPlayer(View view) {

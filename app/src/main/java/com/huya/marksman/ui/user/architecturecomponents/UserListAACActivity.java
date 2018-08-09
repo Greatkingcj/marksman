@@ -5,6 +5,7 @@ import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.support.annotation.Nullable;
+import android.support.v4.util.LruCache;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,7 +20,13 @@ import com.huya.marksman.data.userdao.User;
 import com.huya.marksman.ui.user.UserDetailActivity;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+
+import okhttp3.Cache;
+import okhttp3.CacheControl;
+import okhttp3.internal.cache.DiskLruCache;
 
 public class UserListAACActivity extends AppCompatActivity {
 

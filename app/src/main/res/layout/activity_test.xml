@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.huya.marksman.ui.test.TestActivity"
+    android:background="#000000">
+
+    <TextView
+        android:id="@+id/sample_five"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:onClick="showUsers"
+        android:text="showUsers"
+        android:textColor="@color/white_ffffff"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/normal_bg"/>
+
+    <TextView
+        android:id="@+id/sample_six"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:onClick="showUsersAAC"
+        android:text="showUsersAAC"
+        android:textColor="@color/white_ffffff"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/normal_bg"/>
+
+    <TextView
+        android:id="@+id/sample_seven"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:onClick="showWebView"
+        android:text="showWebView"
+        android:textColor="@color/white_ffffff"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/normal_bg"/>
+
+    <TextView
+        android:id="@+id/sample_eight"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:onClick="testService"
+        android:text="testService"
+        android:textColor="@color/white_ffffff"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/normal_bg"/>
+
+</LinearLayout>
