@@ -17,8 +17,8 @@ public class RemoteIpcServer extends IpcServer implements RemoteIpcServerStub{
     }
 
     @Override
-    public String switchVideo() {
-        return service.switchVideo();
+    public String updateVideo(String path) {
+        return path + service.switchVideo();
     }
 
     @Override

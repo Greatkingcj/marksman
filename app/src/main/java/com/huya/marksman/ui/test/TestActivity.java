@@ -33,4 +33,8 @@ public class TestActivity extends AppCompatActivity {
     public void  testService(View view) {
         startActivity(new Intent(this, TestServiceActivity.class));
     }
+
+    public void  testTextureView(View view) {
+        startActivity(new Intent(this, TestTextureViewActivity.class));
+    }
 }

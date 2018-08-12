@@ -31,6 +31,8 @@ public class TestServiceActivity extends AppCompatActivity {
     private ServiceConnection connectionBinder;
     StringBuilder stringBuilder = new StringBuilder();
 
+    IBookManager2 bookManager2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +49,7 @@ public class TestServiceActivity extends AppCompatActivity {
 
     public void testContentProvider(View view) {
         startService(intentProvider);
-        String result1 = RemoteIpcClient.getInstance().switchVideo();
+        String result1 = RemoteIpcClient.getInstance().updateVideo("video");
         String result2 = RemoteIpcClient.getInstance().updateSetting();
         textView.setText("返回的值： " + result1 + result2);
     }
@@ -88,7 +90,12 @@ public class TestServiceActivity extends AppCompatActivity {
             connectionBinder = new ServiceConnection() {
                 @Override
                 public void onServiceConnected(ComponentName name, IBinder service) {
-                    IBookManager2 bookManager2 = BookManagerImpl2.asInterface(service);
+                    bookManager2 = BookManagerImpl2.asInterface(service);
+                    try {
+                        service.linkToDeath(mDeathRecipient, 0);
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
                     try {
                         bookManager2.addBook(new Book(3, "bookB3"));
                         List<Book> books = bookManager2.getBookList();
@@ -113,6 +120,17 @@ public class TestServiceActivity extends AppCompatActivity {
 
         bindService(intentBinder, connectionBinder, BIND_AUTO_CREATE);
     }
+
+    private IBinder.DeathRecipient mDeathRecipient = new IBinder.DeathRecipient() {
+        @Override
+        public void binderDied() {
+            if (bookManager2 == null) {
+                return;
+            }
+            bookManager2.asBinder().unlinkToDeath(mDeathRecipient, 0);
+            bookManager2 = null;
+        }
+    };
 
     @Override
     protected void onDestroy() {

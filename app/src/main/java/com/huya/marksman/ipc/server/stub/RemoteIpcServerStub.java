@@ -9,6 +9,6 @@ import com.huya.marksman.ipc.server.RemoteIpcServer;
 
 @ServerUri(RemoteIpcServer.URI)
 public interface RemoteIpcServerStub {
-    String switchVideo();
+    String updateVideo(String path);
     String updateSetting();
 }

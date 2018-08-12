@@ -56,4 +56,16 @@
         android:gravity="center"
         android:background="@drawable/normal_bg"/>
 
+    <TextView
+        android:id="@+id/sample_texture_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:onClick="testTextureView"
+        android:text="testTextureView"
+        android:textColor="@color/white_ffffff"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/normal_bg"/>
+
 </LinearLayout>

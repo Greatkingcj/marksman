@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.huya.marksman.ui.WallpaperActivity"
+    android:background="#000000"
+    android:gravity="center">
+    <TextView
+        android:id="@+id/sample_second"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:onClick="gotoParticles"
+        android:text="ParticlesWallpaper"
+        android:textColor="@color/white_ffffff"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/normal_bg"/>
+
+    <TextView
+        android:id="@+id/sample_third"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:onClick="gotoPano"
+        android:text="PanoWallpaper"
+        android:textColor="@color/white_ffffff"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/normal_bg"/>
+
+</LinearLayout>

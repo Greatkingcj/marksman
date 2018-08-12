@@ -54,6 +54,19 @@
                 android:name="android.service.wallpaper"
                 android:resource="@xml/wallpaper"/>
         </service>
+        <service
+            android:name=".service.wallpaper.PanoWallpaperService"
+            android:enabled="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter android:priority="1">
+                <action android:name="android.service.wallpaper.WallpaperService"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/wallpaper"/>
+        </service>
 
         <provider
             android:name=".ipc.server.MainIpcServer"
@@ -116,6 +129,13 @@
             android:exported="true"
             android:process=":service">
         </service>
+
+        <activity android:name=".ui.test.TestTextureViewActivity">
+        </activity>
+        <activity android:name=".ui.WallpaperActivity">
+        </activity>
+        <activity android:name=".ui.PanoActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -16,6 +16,7 @@ import com.huya.marksman.ui.AirHockeyActivity;
 import com.huya.marksman.ui.EntryAnimActivity;
 import com.huya.marksman.ui.ParticlesActivity;
 import com.huya.marksman.ui.ShatterAnimActivity;
+import com.huya.marksman.ui.WallpaperActivity;
 import com.huya.marksman.ui.test.TestActivity;
 import com.huya.marksman.ui.user.UserListActivity;
 import com.huya.marksman.ui.user.architecturecomponents.UserListAACActivity;
@@ -70,8 +71,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, AirHockeyActivity.class));
     }
 
-    public void  gotoSecond(View view) {
-        startActivity(new Intent(this, ParticlesActivity.class));
+    public void  gotoWallpaper(View view) {
+        startActivity(new Intent(this, WallpaperActivity.class));
     }
 
     public void  gotoThird(View view) {
