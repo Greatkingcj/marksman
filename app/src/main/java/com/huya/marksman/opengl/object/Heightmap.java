@@ -6,14 +6,14 @@ import android.graphics.Color;
 import com.huya.marksman.opengl.object.bufferobject.IndexBuffer;
 import com.huya.marksman.opengl.object.bufferobject.VertexBuffer;
 import com.huya.marksman.opengl.programs.HeightmapShaderProgram;
-import com.huya.marksman.util.openglutil.Geometry;
+import com.huya.marksman.opengl.util.Geometry;
 
 import static android.opengl.GLES20.GL_ELEMENT_ARRAY_BUFFER;
 import static android.opengl.GLES20.GL_TRIANGLES;
 import static android.opengl.GLES20.GL_UNSIGNED_SHORT;
 import static android.opengl.GLES20.glBindBuffer;
 import static android.opengl.GLES20.glDrawElements;
-import static com.huya.marksman.Constants.Constants.BYTES_PER_FLOAT;
+import static com.huya.marksman.opengl.config.Constants.BYTES_PER_FLOAT;
 
 /**
  * Created by charles on 2018/7/8.

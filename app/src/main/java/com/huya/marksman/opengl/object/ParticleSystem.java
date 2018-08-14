@@ -4,11 +4,11 @@ import android.graphics.Color;
 
 import com.huya.marksman.opengl.object.bufferobject.VertexArray;
 import com.huya.marksman.opengl.programs.ParticleShaderProgram;
-import com.huya.marksman.util.openglutil.Geometry;
+import com.huya.marksman.opengl.util.Geometry;
 
 import static android.opengl.GLES20.GL_POINTS;
 import static android.opengl.GLES20.glDrawArrays;
-import static com.huya.marksman.Constants.Constants.BYTES_PER_FLOAT;
+import static com.huya.marksman.opengl.config.Constants.BYTES_PER_FLOAT;
 
 /**
  * Created by charles on 2018/7/7.

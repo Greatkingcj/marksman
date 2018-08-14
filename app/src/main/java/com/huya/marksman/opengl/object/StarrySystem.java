@@ -2,7 +2,7 @@ package com.huya.marksman.opengl.object;
 
 import android.opengl.GLES20;
 
-import com.huya.marksman.Constants.Constants;
+import com.huya.marksman.opengl.config.Constants;
 import com.huya.marksman.opengl.renders.StarryRenderer;
 
 import java.nio.ByteBuffer;

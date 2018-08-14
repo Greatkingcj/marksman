@@ -1,8 +1,8 @@
 package com.huya.marksman.opengl.object;
 
-import com.huya.marksman.Constants.Constants;
+import com.huya.marksman.opengl.config.Constants;
 import com.huya.marksman.opengl.renders.StarryRenderer;
-import com.huya.marksman.util.openglutil.MathHelper;
+import com.huya.marksman.opengl.util.MathHelper;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

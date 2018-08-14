@@ -13,8 +13,8 @@ import android.view.animation.LinearInterpolator;
 
 import com.huya.marksman.listener.ShatterAnimListener;
 import com.huya.marksman.opengl.programs.ShatterProgram;
-import com.huya.marksman.util.openglutil.TextureHelper;
-import com.huya.marksman.util.openglutil.VaryTools;
+import com.huya.marksman.opengl.util.TextureHelper;
+import com.huya.marksman.opengl.util.VaryTools;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;

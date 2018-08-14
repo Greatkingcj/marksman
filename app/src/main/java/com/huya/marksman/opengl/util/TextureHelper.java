@@ -1,4 +1,4 @@
-package com.huya.marksman.util.openglutil;
+package com.huya.marksman.opengl.util;
 
 import android.content.Context;
 import android.graphics.Bitmap;

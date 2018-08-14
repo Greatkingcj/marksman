@@ -210,7 +210,7 @@ public class PanoSurfaceView extends GLSurfaceView implements SensorEventListene
 
 
     private void init() {
-        renderer = new PanoRenderer();
+        renderer = new PanoRenderer(getContext());
         setEGLContextClientVersion(2);
         setRenderer(renderer);
         setPreserveEGLContextOnPause(true);

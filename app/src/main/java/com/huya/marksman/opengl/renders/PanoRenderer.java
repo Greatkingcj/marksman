@@ -1,5 +1,6 @@
 package com.huya.marksman.opengl.renders;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.hardware.SensorManager;
@@ -9,8 +10,8 @@ import android.opengl.Matrix;
 
 import com.huya.marksman.MarkApplication;
 import com.huya.marksman.opengl.gles.GLSphere;
-import com.huya.marksman.opengl.gles.GLSphereProgram;
-import com.huya.marksman.opengl.gles.GLTexture;
+import com.huya.marksman.opengl.programs.PanoProgram;
+import com.huya.marksman.opengl.util.TextureHelper;
 
 import java.io.IOException;
 
@@ -18,12 +19,15 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 /**
- * Created by charles on 2018/8/12.
+ *
+ * @author charles
+ * @date 2018/8/12
  */
 
 public class PanoRenderer implements GLSurfaceView.Renderer{
+    private Context context;
     private GLSphere sphere;
-    private GLSphereProgram sphereProgram;
+    private PanoProgram panoProgram;
     private boolean textureRequestUpdate = true;
     private int textureId = 0;
 
@@ -48,7 +52,8 @@ public class PanoRenderer implements GLSurfaceView.Renderer{
     private float mChangeRotateX;
     private float mChangeRotateY;
 
-    public PanoRenderer() {
+    public PanoRenderer(Context context) {
+        this.context = context;
         initSphereAndMatrix();
     }
 
@@ -105,8 +110,6 @@ public class PanoRenderer implements GLSurfaceView.Renderer{
     }
 
     private void initSphereAndMatrix() {
-        sphere = new GLSphere(18, 75, 150);
-        sphereProgram = new GLSphereProgram();
 
         Matrix.setIdentityM(rotationMatrix, 0);
         Matrix.setIdentityM(modelMatrix, 0);
@@ -133,14 +136,15 @@ public class PanoRenderer implements GLSurfaceView.Renderer{
     private void loadTexture() {
         if (textureRequestUpdate && (textureBitmap != null)) {
             textureRequestUpdate = false;
-            textureId = GLTexture.loadTexture(textureBitmap);
+            textureId = TextureHelper.loadTexture(textureBitmap);
             textureBitmap = null;
         }
     }
 
     @Override
     public void onSurfaceCreated(GL10 gl, EGLConfig config) {
-        sphereProgram.init();
+        sphere = new GLSphere(18, 75, 150);
+        panoProgram = new PanoProgram(context);
         loadTextureBitmap();
     }
 
@@ -160,9 +164,9 @@ public class PanoRenderer implements GLSurfaceView.Renderer{
             return;
         }
 
-        sphereProgram.use();
-        sphere.bindVerticesBuffer(sphereProgram.getPositionHandle());
-        sphere.bindTextureCoordinateBuffer(sphereProgram.getTextureCoordinateHandle());
+        panoProgram.useProgram();
+        sphere.bindVerticesBuffer(panoProgram.getPositionLocation());
+        sphere.bindTextureCoordinateBuffer(panoProgram.getTexCoordinateLocation());
 
         float rotationY = initRotationY + sensorRotationY + dragRotationY;
         rotationY = Math.min(rotationY, 90);
@@ -174,11 +178,11 @@ public class PanoRenderer implements GLSurfaceView.Renderer{
         Matrix.rotateM(modelMatrix, 0, initRotationX + sensorRotationX + dragRotationX - sensorRotationZ, 0.0f, 1.0f, 0.0f);
         Matrix.multiplyMM(modelViewMatrix, 0, viewMatrix, 0, modelMatrix, 0);
         Matrix.multiplyMM(modelViewProjectionMatrix, 0, projectionMatrix, 0, modelViewMatrix, 0);
-        GLES20.glUniformMatrix4fv(sphereProgram.getMVPHandle(), 1, false, modelViewProjectionMatrix, 0);
+        GLES20.glUniformMatrix4fv(panoProgram.getMVPMatrixLocation(), 1, false, modelViewProjectionMatrix, 0);
 
         GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
         GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, textureId);
-        GLES20.glUniform1i(sphereProgram.getTextureHandle(), 0);
+        GLES20.glUniform1i(panoProgram.getTextureUnitLocation(), 0);
 
         sphere.draw();
     }

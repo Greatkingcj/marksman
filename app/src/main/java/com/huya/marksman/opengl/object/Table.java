@@ -5,7 +5,7 @@ import com.huya.marksman.opengl.programs.TextureShaderProgram;
 
 import static android.opengl.GLES20.GL_TRIANGLE_FAN;
 import static android.opengl.GLES20.glDrawArrays;
-import static com.huya.marksman.Constants.Constants.BYTES_PER_FLOAT;
+import static com.huya.marksman.opengl.config.Constants.BYTES_PER_FLOAT;
 
 /**
  * Created by charles on 2018/6/30.

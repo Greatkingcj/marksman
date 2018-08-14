@@ -1,6 +1,6 @@
 package com.huya.marksman.opengl.object;
 
-import com.huya.marksman.util.openglutil.Geometry;
+import com.huya.marksman.opengl.util.Geometry;
 
 import java.util.Random;
 

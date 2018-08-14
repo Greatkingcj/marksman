@@ -12,7 +12,7 @@ import static android.opengl.GLES20.glBufferData;
 import static android.opengl.GLES20.glEnableVertexAttribArray;
 import static android.opengl.GLES20.glGenBuffers;
 import static android.opengl.GLES20.glVertexAttribPointer;
-import static com.huya.marksman.Constants.Constants.BYTES_PER_SHORT;
+import static com.huya.marksman.opengl.config.Constants.BYTES_PER_SHORT;
 
 /**
  * Created by charles on 2018/7/8.

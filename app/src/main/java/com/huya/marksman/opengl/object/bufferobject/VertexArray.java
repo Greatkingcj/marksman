@@ -7,7 +7,7 @@ import java.nio.FloatBuffer;
 import static android.opengl.GLES20.GL_FLOAT;
 import static android.opengl.GLES20.glEnableVertexAttribArray;
 import static android.opengl.GLES20.glVertexAttribPointer;
-import static com.huya.marksman.Constants.Constants.BYTES_PER_FLOAT;
+import static com.huya.marksman.opengl.config.Constants.BYTES_PER_FLOAT;
 
 /**
  * Created by charles on 2018/6/30.

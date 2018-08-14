@@ -1,6 +1,4 @@
-package com.huya.marksman.util.openglutil;
-
-import android.util.FloatMath;
+package com.huya.marksman.opengl.util;
 
 import java.util.ArrayList;
 import java.util.List;

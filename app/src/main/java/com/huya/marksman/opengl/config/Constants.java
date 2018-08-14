@@ -1,4 +1,4 @@
-package com.huya.marksman.Constants;
+package com.huya.marksman.opengl.config;
 
 /**
  * Created by charles on 2018/6/30.

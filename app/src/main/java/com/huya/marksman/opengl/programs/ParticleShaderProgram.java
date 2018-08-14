@@ -22,13 +22,20 @@ import android.content.Context;
 import com.huya.marksman.R;
 
 
+/**
+ * @author charles
+ */
 public class ParticleShaderProgram extends ShaderProgram {
-    // Uniform locations
+    /**
+     * Uniform locations
+     */
     private final int uMatrixLocation;
-    private final int uTimeLocation;    
+    private final int uTimeLocation;
     private final int uTextureUnitLocation;
-    
-    // Attribute locations
+
+    /**
+     *  Attribute locations
+     */
     private final int aPositionLocation;
     private final int aColorLocation;
     private final int aDirectionVectorLocation;

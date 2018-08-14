@@ -1,4 +1,4 @@
-package com.huya.marksman.util.openglutil;
+package com.huya.marksman.opengl.util;
 
 /**
  * Created by charles on 2018/7/7.

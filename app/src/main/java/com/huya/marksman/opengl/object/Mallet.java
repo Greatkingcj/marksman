@@ -3,9 +3,9 @@ package com.huya.marksman.opengl.object;
 
 import com.huya.marksman.opengl.object.bufferobject.VertexArray;
 import com.huya.marksman.opengl.programs.ColorShaderProgram;
-import com.huya.marksman.util.openglutil.Geometry;
-import com.huya.marksman.util.openglutil.ObjectBuilder;
-import com.huya.marksman.util.openglutil.ObjectBuilder.*;
+import com.huya.marksman.opengl.util.Geometry;
+import com.huya.marksman.opengl.util.ObjectBuilder;
+import com.huya.marksman.opengl.util.ObjectBuilder.*;
 
 import java.util.List;
 
