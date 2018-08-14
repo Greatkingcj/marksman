@@ -1,9 +1,9 @@
 package com.huya.marksman.commonanimator;
 
-import com.huya.marksman.magicsurfaceview.MagicBaseSurface;
-import com.huya.marksman.magicsurfaceview.ReusableVec;
-import com.huya.marksman.magicsurfaceview.Vec;
-import com.huya.marksman.magicsurfaceview.VecPool;
+import com.huya.marksman.opengl.magicsurfaceview.MagicBaseSurface;
+import com.huya.marksman.opengl.magicsurfaceview.ReusableVec;
+import com.huya.marksman.opengl.magicsurfaceview.Vec;
+import com.huya.marksman.opengl.magicsurfaceview.VecPool;
 
 public class AnimHelper {
 

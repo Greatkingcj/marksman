@@ -8,13 +8,14 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
 import com.huya.marksman.MarkApplication;
-import com.huya.marksman.renders.PanoRenderer;
+import com.huya.marksman.opengl.renders.PanoRenderer;
 import com.huya.marksman.util.ScreenUtil;
 
 /**
@@ -28,7 +29,7 @@ public class PanoSurfaceView extends GLSurfaceView implements SensorEventListene
     private PanoRenderer renderer;
     private PanoImageListener imageListener;
     private boolean dragEnable = false;
-    private boolean flingEnable = true;
+    private boolean flingEnable = false;
     private int screenWidth;
     private int screenHeight;
     private ValueAnimator valueAnimatorX;
@@ -175,6 +176,7 @@ public class PanoSurfaceView extends GLSurfaceView implements SensorEventListene
         int type = event.sensor.getType();
         if (type == Sensor.TYPE_ROTATION_VECTOR) {
             if (renderer != null) {
+                Log.e("PanoSurfaceView", event.values.toString());
                 renderer.setRotationVector(event.values, firstSensorCallback);
                 requestRender();
                 if (imageListener != null) {
@@ -206,14 +208,6 @@ public class PanoSurfaceView extends GLSurfaceView implements SensorEventListene
         this.flingEnable = flingEnable;
     }
 
-    /*public void setImageFilePath(final String imageFilePath) {
-        queueEvent(new Runnable() {
-            @Override
-            public void run() {
-                renderer.setImageFilePath(imageFilePath);
-            }
-        });
-    }*/
 
     private void init() {
         renderer = new PanoRenderer();

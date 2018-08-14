@@ -9,7 +9,7 @@ import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
 import com.huya.marksman.listener.ShatterAnimListener;
-import com.huya.marksman.renders.ShatterAnimRender;
+import com.huya.marksman.opengl.renders.ShatterAnimRender;
 
 /**
  *

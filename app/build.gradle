@@ -36,6 +36,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 
     implementation project(":huyaijkplayer")
+    implementation project(":base")
 
     implementation 'com.jakewharton:butterknife:7.0.1'
     annotationProcessor 'com.jakewharton:butterknife:7.0.1'

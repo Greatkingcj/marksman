@@ -11,15 +11,15 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.huya.marksman.commonanimator.Direction;
-import com.huya.marksman.magicsurfaceview.MagicMultiSurface;
-import com.huya.marksman.magicsurfaceview.MagicMultiSurfaceUpdater;
-import com.huya.marksman.magicsurfaceview.MagicSurface;
-import com.huya.marksman.magicsurfaceview.MagicSurfaceMatrixUpdater;
-import com.huya.marksman.magicsurfaceview.MagicSurfaceModelUpdater;
-import com.huya.marksman.magicsurfaceview.MagicSurfaceView;
-import com.huya.marksman.magicsurfaceview.MagicUpdater;
-import com.huya.marksman.magicsurfaceview.MagicUpdaterListener;
-import com.huya.marksman.updater.WaveAnimUpdater;
+import com.huya.marksman.opengl.magicsurfaceview.MagicMultiSurface;
+import com.huya.marksman.opengl.magicsurfaceview.MagicMultiSurfaceUpdater;
+import com.huya.marksman.opengl.magicsurfaceview.MagicSurface;
+import com.huya.marksman.opengl.magicsurfaceview.MagicSurfaceMatrixUpdater;
+import com.huya.marksman.opengl.magicsurfaceview.MagicSurfaceModelUpdater;
+import com.huya.marksman.opengl.magicsurfaceview.MagicSurfaceView;
+import com.huya.marksman.opengl.magicsurfaceview.MagicUpdater;
+import com.huya.marksman.opengl.magicsurfaceview.MagicUpdaterListener;
+import com.huya.marksman.opengl.updater.WaveAnimUpdater;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

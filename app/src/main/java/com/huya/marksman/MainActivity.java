@@ -10,23 +10,13 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.huya.huyaijkplayer.activitys.MainPlayerActivity;
-import com.huya.marksman.renders.ParticlesRenderer;
-import com.huya.marksman.renders.StarryRenderer;
+import com.huya.marksman.opengl.renders.ParticlesRenderer;
+import com.huya.marksman.opengl.renders.StarryRenderer;
 import com.huya.marksman.ui.AirHockeyActivity;
 import com.huya.marksman.ui.EntryAnimActivity;
-import com.huya.marksman.ui.ParticlesActivity;
 import com.huya.marksman.ui.ShatterAnimActivity;
-import com.huya.marksman.ui.WallpaperActivity;
+import com.huya.marksman.ui.wallpaper.WallpaperActivity;
 import com.huya.marksman.ui.test.TestActivity;
-import com.huya.marksman.ui.user.UserListActivity;
-import com.huya.marksman.ui.user.architecturecomponents.UserListAACActivity;
-import com.huya.marksman.ui.webview.WebViewActivity;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.Map;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

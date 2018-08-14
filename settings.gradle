@@ -1,1 +1,1 @@
-include ':app', ":huyaijkplayer"
+include ':app', ':base', ":huyaijkplayer"

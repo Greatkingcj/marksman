@@ -8,7 +8,7 @@ import android.service.wallpaper.WallpaperService;
 import android.view.SurfaceHolder;
 import android.widget.Toast;
 
-import com.huya.marksman.renders.ParticlesRenderer;
+import com.huya.marksman.opengl.renders.ParticlesRenderer;
 
 /**
  * Created by charles on 2018/7/11.

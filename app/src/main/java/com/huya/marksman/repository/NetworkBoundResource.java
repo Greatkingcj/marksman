@@ -9,7 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.annotation.WorkerThread;
 
 import com.huya.marksman.api.ApiResponse;
-import com.huya.marksman.vo.Resource;
+import com.huya.marksman.entity.Resource;
 
 /**
  * Created by charles on 2018/6/26.

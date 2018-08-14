@@ -1,7 +1,7 @@
 package com.huya.marksman.ui.user;
 
 import com.huya.marksman.BasePresenter;
-import com.huya.marksman.BaseView;
+import com.charles.base.ui.BaseView;
 import com.huya.marksman.data.userdao.User;
 
 /**

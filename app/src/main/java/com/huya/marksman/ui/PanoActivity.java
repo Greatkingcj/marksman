@@ -16,4 +16,10 @@ public class PanoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pano);
         panoSurfaceView = findViewById(R.id.pano_surface_view);
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        panoSurfaceView.onResume();
+    }
 }

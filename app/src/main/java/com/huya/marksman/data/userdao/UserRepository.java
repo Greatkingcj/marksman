@@ -1,24 +1,12 @@
 package com.huya.marksman.data.userdao;
 
-import android.arch.lifecycle.LiveData;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-
-import com.huya.marksman.api.ApiResponse;
-import com.huya.marksman.api.GithubApi;
-import com.huya.marksman.data.userdao.UserDao;
-import com.huya.marksman.vo.Resource;
-import com.huya.marksman.data.userdao.User;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.Executor;
-
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
 
 import static dagger.internal.Preconditions.checkNotNull;
 

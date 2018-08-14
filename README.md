@@ -17,3 +17,5 @@
 #### 07.30 优化MultiDex方案，针对5.0以下机型，在mini进程中完成dexopt操作，由于5.0以上是art速度会快很多
 
 #### 08.09 采用contentprovider, aidl, 以及手写binder完成进程间通信
+
+#### 08.14 使用opengl完成全景图壁纸功能

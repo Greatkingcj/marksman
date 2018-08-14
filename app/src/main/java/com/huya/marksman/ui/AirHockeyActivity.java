@@ -11,7 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
-import com.huya.marksman.renders.AirHockeyRenderer;
+import com.huya.marksman.opengl.renders.AirHockeyRenderer;
 
 public class AirHockeyActivity extends AppCompatActivity {
 

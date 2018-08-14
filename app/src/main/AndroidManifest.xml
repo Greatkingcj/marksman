@@ -132,7 +132,7 @@
 
         <activity android:name=".ui.test.TestTextureViewActivity">
         </activity>
-        <activity android:name=".ui.WallpaperActivity">
+        <activity android:name=".ui.wallpaper.WallpaperActivity">
         </activity>
         <activity android:name=".ui.PanoActivity">
         </activity>

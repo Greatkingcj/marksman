@@ -9,17 +9,17 @@ import com.huya.marksman.MagicActivity;
 import com.huya.marksman.MainActivity;
 import com.huya.marksman.R;
 import com.huya.marksman.commonanimator.FloatValueAnimator;
-import com.huya.marksman.magicsurfaceview.MagicScene;
-import com.huya.marksman.magicsurfaceview.MagicSceneBuilder;
-import com.huya.marksman.magicsurfaceview.MagicSurface;
-import com.huya.marksman.magicsurfaceview.MagicUpdater;
-import com.huya.marksman.magicsurfaceview.MagicUpdaterListener;
-import com.huya.marksman.magicsurfaceview.PointLight;
-import com.huya.marksman.updater.LaunchBackgroundUpdater;
-import com.huya.marksman.updater.LaunchButtonMatrixUpdater;
-import com.huya.marksman.updater.LaunchButtonModelUpdater;
-import com.huya.marksman.updater.LaunchSceneUpdater;
-import com.huya.marksman.updater.LaunchTextModelUpdater;
+import com.huya.marksman.opengl.magicsurfaceview.MagicScene;
+import com.huya.marksman.opengl.magicsurfaceview.MagicSceneBuilder;
+import com.huya.marksman.opengl.magicsurfaceview.MagicSurface;
+import com.huya.marksman.opengl.magicsurfaceview.MagicUpdater;
+import com.huya.marksman.opengl.magicsurfaceview.MagicUpdaterListener;
+import com.huya.marksman.opengl.magicsurfaceview.PointLight;
+import com.huya.marksman.opengl.updater.LaunchBackgroundUpdater;
+import com.huya.marksman.opengl.updater.LaunchButtonMatrixUpdater;
+import com.huya.marksman.opengl.updater.LaunchButtonModelUpdater;
+import com.huya.marksman.opengl.updater.LaunchSceneUpdater;
+import com.huya.marksman.opengl.updater.LaunchTextModelUpdater;
 
 
 /**
