@@ -18,6 +18,12 @@ public class GLSphere {
     private ShortBuffer indexBuffer;
     private int indicesCount;
 
+    /**
+     *
+     * @param radius
+     * @param rings
+     * @param sectors
+     */
     public GLSphere(float radius, int rings, int sectors) {
         int numPoint = (rings + 1) * (sectors + 1);
         float[] vertexData = new float[numPoint * 3];
@@ -44,6 +50,7 @@ public class GLSphere {
         int index = 0;
         for (int i = 0; i < numParallels; i++) {
             for (int j = 0; j < sectors; j++) {
+                //这个地方是一个球体绘制了正反两个面
                 indices[index++] = (short) (i * (sectors + 1) + j);
                 indices[index++] = (short) ((short) (i + 1) * (sectors + 1) + j);
                 indices[index++] = (short) ((short) (i + 1) * (sectors + 1) + (j + 1));

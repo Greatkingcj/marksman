@@ -17,7 +17,7 @@
 
     <style name="AppTheme.FullScreen.Launch" parent="AppTheme.FullScreen">
         <item name="android:windowFullscreen">true</item>
-        <item name="android:windowBackground">@drawable/coffee_circle</item>
+        <item name="android:windowBackground">@drawable/start_page_default_bg</item>
     </style>
 
     <style name="AppTheme.NoActionBar" >

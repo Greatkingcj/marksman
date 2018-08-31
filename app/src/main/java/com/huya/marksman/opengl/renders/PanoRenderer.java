@@ -70,15 +70,15 @@ public class PanoRenderer implements GLSurfaceView.Renderer{
         return rotation % 360;
     }
 
-    public void addDragRotationX(float x) {
+    /*public void addDragRotationX(float x) {
         dragRotationX += x;
-    }
+    }*/
 
-    public void addDragRotationY(float y) {
+    /*public void addDragRotationY(float y) {
         dragRotationY += y;
         dragRotationY = Math.min(dragRotationY, 90 - sensorRotationY);
         dragRotationY = Math.max(dragRotationY, -90 - sensorRotationY);
-    }
+    }*/
 
     public void setInitRotation(int rotationX, int rotationY) {
         initRotationX = 0;
@@ -127,7 +127,7 @@ public class PanoRenderer implements GLSurfaceView.Renderer{
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inScaled = false;
         try {
-            textureBitmap = BitmapFactory.decodeStream(MarkApplication.getApplication().getAssets().open("test3.jpg"));
+            textureBitmap = BitmapFactory.decodeStream(MarkApplication.getApplication().getAssets().open("test2.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -143,7 +143,7 @@ public class PanoRenderer implements GLSurfaceView.Renderer{
 
     @Override
     public void onSurfaceCreated(GL10 gl, EGLConfig config) {
-        sphere = new GLSphere(18, 75, 150);
+        sphere = new GLSphere(88, 75, 150);
         panoProgram = new PanoProgram(context);
         loadTextureBitmap();
     }

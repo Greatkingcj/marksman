@@ -9,8 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.huya.huyaijkplayer.activitys.MainPlayerActivity;
-import com.huya.marksman.opengl.renders.ParticlesRenderer;
+import com.charles.ijkplayer.activitys.MainPlayerActivity;
 import com.huya.marksman.opengl.renders.StarryRenderer;
 import com.huya.marksman.ui.AirHockeyActivity;
 import com.huya.marksman.ui.EntryAnimActivity;

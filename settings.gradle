@@ -1,1 +1,1 @@
-include ':app', ':base', ":huyaijkplayer"
+include ':app', ':base', ':video-editor', ':video-player'

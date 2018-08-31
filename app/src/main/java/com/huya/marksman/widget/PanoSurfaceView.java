@@ -67,16 +67,16 @@ public class PanoSurfaceView extends GLSurfaceView implements SensorEventListene
 
     @Override
     public boolean onScroll(MotionEvent lastEvent, MotionEvent event, float distanceX, float distanceY) {
-        valueAnimatorX.cancel();
+       /* valueAnimatorX.cancel();
         valueAnimatorY.cancel();
         float deltaX = distanceX / screenWidth * 90;
         float deltaY = distanceY / screenHeight * 90;
-        renderer.addDragRotationX(-deltaX);
-        renderer.addDragRotationY(deltaY);
+        //renderer.addDragRotationX(-deltaX);
+        //renderer.addDragRotationY(deltaY);
         requestRender();
         if (imageListener != null) {
             imageListener.onRotationChanged(renderer.getRotationX(), renderer.getRotationY());
-        }
+        }*/
         return true;
     }
 
@@ -87,7 +87,7 @@ public class PanoSurfaceView extends GLSurfaceView implements SensorEventListene
 
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-        if (!flingEnable) {
+        /*if (!flingEnable) {
             return false;
         }
 
@@ -100,7 +100,7 @@ public class PanoSurfaceView extends GLSurfaceView implements SensorEventListene
             valueAnimatorX.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {
-                    renderer.addDragRotationX((Float) animation.getAnimatedValue());
+                    //renderer.addDragRotationX((Float) animation.getAnimatedValue());
                     requestRender();
                 }
             });
@@ -115,13 +115,14 @@ public class PanoSurfaceView extends GLSurfaceView implements SensorEventListene
             valueAnimatorY.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {
-                    renderer.addDragRotationY((Float) animation.getAnimatedValue());
+                    //renderer.addDragRotationY((Float) animation.getAnimatedValue());
                     requestRender();
                 }
             });
             valueAnimatorY.start();
         }
-        return true;
+        return true;*/
+        return false;
     }
 
     public interface PanoImageListener {

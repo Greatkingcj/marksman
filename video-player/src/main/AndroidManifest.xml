@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.huya.ijkplayer">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <application>
+        <activity android:name="com.charles.ijkplayer.activitys.MainPlayerActivity">
+        </activity>
+        <activity android:name="com.charles.ijkplayer.activitys.VideoActivity">
+        </activity>
+        <activity android:name="com.charles.ijkplayer.activitys.SurfaceViewActivity">
+        </activity>
+        <activity
+            android:name="com.charles.ijkplayer.activitys.HuyaVideoViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+        <activity android:name="com.charles.ijkplayer.activitys.OpenGlActivity">
+        </activity>
+        <activity android:name="com.charles.ijkplayer.activitys.CameraActivity">
+        </activity>
+        <activity android:name="com.charles.ijkplayer.activitys.Camera1Activity">
+        </activity>
+        <activity android:name="com.charles.ijkplayer.activitys.CameraBasicActivity">
+        </activity>
+        <activity android:name="com.charles.ijkplayer.activitys.CameraAnimActivity">
+        </activity>
+        <activity android:name="com.charles.ijkplayer.activitys.CameraBeauActivity">
+        </activity>
+        <activity android:name="com.charles.ijkplayer.activitys.VideoListActivity">
+        </activity>
+        <activity android:name="com.charles.ijkplayer.activitys.AnimatorActivity">
+        </activity>
+    </application>
+
+</manifest>
