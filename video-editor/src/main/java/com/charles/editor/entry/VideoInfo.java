@@ -5,6 +5,7 @@ package com.charles.editor.entry;
  */
 
 public class VideoInfo {
+    public boolean isHeader;
     public long id;
     public String mimeType;
     public long fileSize;

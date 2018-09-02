@@ -3,4 +3,10 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="message_err">Sorry, error occurred!</string>
+
+    <string name="empty_record">Oops! No more data~</string>
+    <string name="network_tip">Please check your network</string>
+
+    <string name="loading">Loading...</string>
 </resources>

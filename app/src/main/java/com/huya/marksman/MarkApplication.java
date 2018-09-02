@@ -10,6 +10,7 @@ import android.content.pm.ApplicationInfo;
 import android.os.Build;
 import android.util.Log;
 
+import com.charles.base.BaseApp;
 import com.huya.marksman.util.PackageUtil;
 import com.huya.marksman.util.StringUtils;
 
@@ -24,7 +25,7 @@ import java.util.jar.Manifest;
  * Created by charles on 2018/7/30.
  */
 
-public class MarkApplication extends Application{
+public class MarkApplication extends BaseApp{
     private static final String TAG = "MarkApplication";
     public static final String KEY_DEX2_SHA1 = "dex2-SHA1-Digest";
 

@@ -14,6 +14,7 @@ import com.huya.marksman.opengl.renders.StarryRenderer;
 import com.huya.marksman.ui.AirHockeyActivity;
 import com.huya.marksman.ui.EntryAnimActivity;
 import com.huya.marksman.ui.ShatterAnimActivity;
+import com.huya.marksman.ui.select.LocalVideoActivity;
 import com.huya.marksman.ui.wallpaper.WallpaperActivity;
 import com.huya.marksman.ui.test.TestActivity;
 
@@ -78,6 +79,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void  showPlayer(View view) {
         startActivity(new Intent(this, MainPlayerActivity.class));
+    }
+
+    public void  selectLocalVideo(View view) {
+        startActivity(new Intent(this, LocalVideoActivity.class));
     }
 
     @Override
