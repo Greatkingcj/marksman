@@ -5,18 +5,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ConfigurationInfo;
 import android.opengl.GLSurfaceView;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.view.MenuItem;
 
-import com.charles.ijkplayer.activitys.MainPlayerActivity;
 import com.huya.marksman.opengl.renders.StarryRenderer;
-import com.huya.marksman.ui.AirHockeyActivity;
-import com.huya.marksman.ui.EntryAnimActivity;
-import com.huya.marksman.ui.ShatterAnimActivity;
-import com.huya.marksman.ui.select.LocalVideoActivity;
-import com.huya.marksman.ui.wallpaper.WallpaperActivity;
-import com.huya.marksman.ui.test.TestActivity;
+import com.huya.marksman.ui.HomeFragment;
+import com.huya.marksman.ui.MineFragment;
+import com.huya.marksman.ui.video.VideoFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -25,7 +26,16 @@ import butterknife.ButterKnife;
  * @author charles
  */
 public class MainActivity extends AppCompatActivity {
-    @Bind(R.id.gl_surface_view) GLSurfaceView glSurfaceView;
+
+    @Bind(R.id.gl_surface_view)
+    GLSurfaceView glSurfaceView;
+
+    @Bind(R.id.bottom_bar)
+    BottomNavigationView bottomNavigationView;
+
+    @Bind(R.id.view_pager)
+    ViewPager pager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +53,70 @@ public class MainActivity extends AppCompatActivity {
         } else {
             throw new UnsupportedOperationException();
         }
+
+        initViews();
+    }
+
+    private void initViews() {
+        pager.setOffscreenPageLimit(2);
+        pager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
+            @Override
+            public Fragment getItem(int position) {
+                switch (position) {
+                    case 0:
+                        return new HomeFragment();
+                    case 1:
+                        return new VideoFragment();
+                    case 2:
+                        return new MineFragment();
+                    default:
+                        return new HomeFragment();
+                }
+            }
+
+            @Override
+            public int getCount() {
+                return 3;
+            }
+        });
+
+        pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                MenuItem item = bottomNavigationView.getMenu().getItem(position);
+                bottomNavigationView.setSelectedItemId(item.getItemId());
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.menu_home:
+                        pager.setCurrentItem(0, false);
+                        return true;
+                    case R.id.menu_video:
+                        pager.setCurrentItem(1, false);
+                        return true;
+                    case R.id.menu_me:
+                        pager.setCurrentItem(2, false);
+                        return true;
+                    default:
+                        break;
+                }
+                return false;
+            }
+        });
     }
 
     @Override
@@ -55,34 +129,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         glSurfaceView.onResume();
-    }
-
-    public void gotoFirst(View view) {
-        startActivity(new Intent(this, AirHockeyActivity.class));
-    }
-
-    public void  gotoWallpaper(View view) {
-        startActivity(new Intent(this, WallpaperActivity.class));
-    }
-
-    public void  gotoThird(View view) {
-        startActivity(new Intent(this, ShatterAnimActivity.class));
-    }
-
-    public void  gotoFour(View view) {
-        startActivity(new Intent(this, EntryAnimActivity.class));
-    }
-
-    public void  testSomething(View view) {
-        startActivity(new Intent(this, TestActivity.class));
-    }
-
-    public void  showPlayer(View view) {
-        startActivity(new Intent(this, MainPlayerActivity.class));
-    }
-
-    public void  selectLocalVideo(View view) {
-        startActivity(new Intent(this, LocalVideoActivity.class));
     }
 
     @Override

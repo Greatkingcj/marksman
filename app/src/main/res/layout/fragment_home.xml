@@ -1,0 +1,90 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.huya.marksman.ui.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_puck_game"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="PuckGame"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/normal_bg"/>
+
+        <TextView
+            android:id="@+id/tv_wall_paper"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Wallpaper"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/normal_bg"/>
+
+        <TextView
+            android:id="@+id/tv_gl_animation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="GLAnimation"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/normal_bg"/>
+
+        <TextView
+            android:id="@+id/tv_entry_anim"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="entryAnim"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/normal_bg"/>
+
+        <TextView
+            android:id="@+id/tv_test_something"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="testSomething"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/normal_bg"/>
+
+        <TextView
+            android:id="@+id/tv_show_player"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="showPlayer"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/normal_bg"/>
+
+        <TextView
+            android:id="@+id/tv_select_video"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="selectLocalVideo"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/normal_bg"/>
+    </LinearLayout>
+
+</FrameLayout>

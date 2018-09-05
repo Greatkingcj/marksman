@@ -4,99 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.huya.marksman.MainActivity">
     <android.opengl.GLSurfaceView
         android:id="@+id/gl_surface_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <LinearLayout
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent"/>
 
-        <TextView
-            android:id="@+id/sample_text"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:onClick="gotoFirst"
-            android:text="PuckGame"
-            android:textColor="@color/white_ffffff"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:background="@drawable/normal_bg"/>
 
-        <TextView
-            android:id="@+id/sample_second"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:onClick="gotoWallpaper"
-            android:text="Wallpaper"
-            android:textColor="@color/white_ffffff"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:background="@drawable/normal_bg"/>
-
-        <TextView
-            android:id="@+id/sample_third"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:onClick="gotoThird"
-            android:text="GLAnimation"
-            android:textColor="@color/white_ffffff"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:background="@drawable/normal_bg"/>
-
-        <TextView
-            android:id="@+id/sample_four"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:onClick="gotoFour"
-            android:text="entryAnim"
-            android:textColor="@color/white_ffffff"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:background="@drawable/normal_bg"/>
-
-        <TextView
-            android:id="@+id/test_something"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:onClick="testSomething"
-            android:text="testSomething"
-            android:textColor="@color/white_ffffff"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:background="@drawable/normal_bg"/>
-
-        <TextView
-            android:id="@+id/sample_eight"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:onClick="showPlayer"
-            android:text="showPlayer"
-            android:textColor="@color/white_ffffff"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:background="@drawable/normal_bg"/>
-
-        <TextView
-            android:id="@+id/sample_nine"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:onClick="selectLocalVideo"
-            android:text="selectLocalVideo"
-            android:textColor="@color/white_ffffff"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:background="@drawable/normal_bg"/>
-    </LinearLayout>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white_ffffff"
+        app:itemTextColor="@drawable/selector_main_page_bottom_text_color"
+        app:itemBackground="@drawable/selector_main_page_bottom_bg"
+        app:menu="@menu/menu_bottom_bar"/>
 </FrameLayout>

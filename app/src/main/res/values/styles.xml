@@ -25,4 +25,13 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <declare-styleable name="AutoAspectFrameLayout">
+        <attr name="autoAspect" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="width" value="1"/>
+            <enum name="height" value="2"/>
+        </attr>
+        <attr name="aspectRatio" format="float"/>
+    </declare-styleable>
+
 </resources>
