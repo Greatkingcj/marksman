@@ -3,12 +3,18 @@ package com.charles.base.utils;
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Point;
 import android.graphics.Rect;
+import android.os.Build;
 import android.support.design.widget.TabLayout;
 import android.util.TypedValue;
+import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.LinearInterpolator;
 import android.widget.LinearLayout;
 
@@ -150,5 +156,42 @@ public class UIUtil {
             child.setLayoutParams(params);
             child.invalidate();
         }
+    }
+
+    public static int dipToPx(Context context, float param) {
+        return (int) (0.5F + param
+                * context.getResources().getDisplayMetrics().density);
+    }
+
+    /**
+     * sp转px的方法。
+     */
+    public static int sp2px(Context context, float spValue) {
+        final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
+        return (int) (spValue * fontScale + 0.5f);
+    }
+
+    public static int getScreenHeight(Context context) {
+        return getScreenSize(context, null).y;
+    }
+
+    @SuppressWarnings("deprecation")
+    @SuppressLint({"NewApi"})
+    public static Point getScreenSize(Context context, Point point) {
+        if (point == null) {
+            point = new Point();
+        }
+
+        WindowManager windowManager = (WindowManager) context
+                .getSystemService(Context.WINDOW_SERVICE);
+        Display display = windowManager.getDefaultDisplay();
+
+        if (Build.VERSION.SDK_INT < 13) {
+            point.x = display.getWidth();
+            point.y = display.getHeight();
+        } else {
+            display.getSize(point);
+        }
+        return point;
     }
 }

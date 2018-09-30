@@ -1,17 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView
+    android:orientation="vertical"
+    android:background="#000">
+
+    <com.charles.ijkplayer.view.videoview.IjkVideoView
+        android:id="@+id/ijk_video_view"
         android:layout_width="match_parent"
-        android:layout_height="30dip"
-        android:text="虎牙视频播放"
-        android:gravity="center"/>
-    <com.charles.ijkplayer.view.videoview.HuyaVideoView
-        android:id="@+id/huya_video_view"
+        android:layout_height="match_parent"/>
+
+    <master.flame.danmaku.ui.widget.DanmakuView
+        android:id="@+id/danmaku_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </com.charles.ijkplayer.view.videoview.HuyaVideoView>
-</LinearLayout>
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/operation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAllCaps="false"
+            android:text="send"/>
+    </LinearLayout>
+
+</RelativeLayout>

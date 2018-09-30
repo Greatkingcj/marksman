@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="userStyle">
+        <attr name="hy_positionType" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="vote6" value="2" />
+            <enum name="vote9" value="3" />
+        </attr>
+        <attr name="hy_userPosition" format="integer"/>
+        <attr name="hy_gameUserNum" format="enum">
+            <enum name="num6" value="6" />
+            <enum name="num10" value="10" />
+        </attr>
+        <attr name="hy_locked" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="AspectRatioImageView">
+        <attr name="marginLeftRightTotal" format="integer"/>
+        <attr name="widthHeightRatio" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="ScrollTabpage">
+        <attr name="tabVisibleCount" format="integer" />
+        <attr name="indicatorPosition">
+            <enum name="bottom" value="0" />
+            <enum name="full" value="1" />
+        </attr>
+        <attr name="indicatorWidth" format="dimension" />
+        <attr name="indicatorHeight" format="dimension" />
+        <attr name="indicatorMarginLeft" format="dimension" />
+        <attr name="indicatorMarginRight" format="dimension" />
+        <attr name="indicatorBackground" format="reference|color" />
+        <attr name="dividerVisible" format="boolean" />
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="dividerMarginTop" format="dimension" />
+        <attr name="dividerMarginBottom" format="dimension" />
+        <attr name="dividerColor" format="reference|color" />
+        <attr name="tabPadding" format="dimension" />
+        <attr name="tabPaddingLeft" format="dimension" />
+        <attr name="tabPaddingRight" format="dimension" />
+        <attr name="tabPaddingTop" format="dimension" />
+        <attr name="tabPaddingBottom" format="dimension" />
+        <attr name="tabMarginLeft" format="dimension" />
+        <attr name="tabMarginRight" format="dimension" />
+        <attr name="hytabTextSize" format="dimension" />
+        <attr name="hytabTextColor" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="CountDownView">
+        <!-- 是否显示圆环背景 -->
+        <attr name="showRingBg" format="boolean" />
+        <!-- 圆环背景色 -->
+        <attr name="ringBgColor" format="color" />
+        <!-- 圆环前景色 -->
+        <attr name="roundProgressColor" format="color" />
+        <!-- 圆环宽度 -->
+        <attr name="ringWidth" format="float" />
+        <!-- 是否显示文字 -->
+        <attr name="showText" format="boolean" />
+        <!-- 进度文本的字体大小 -->
+        <attr name="progressTextSize" format="dimension" />
+        <!-- 文本颜色 -->
+        <attr name="progressTextColor" format="color"/>
+        <!-- 倒计时 -->
+        <attr name="countdownTime" format="integer"/>
+    </declare-styleable>
+</resources>

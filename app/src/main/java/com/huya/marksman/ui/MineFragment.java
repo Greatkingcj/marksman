@@ -1,43 +1,33 @@
 package com.huya.marksman.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.huya.marksman.R;
+import com.huya.marksman.ui.mine.TestView1Activity;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class MineFragment extends Fragment {
 
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    @Bind(R.id.test_view1)
+    Button testView1;
 
     public MineFragment() {
-        // Required empty public constructor
-    }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MineFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static MineFragment newInstance(String param1, String param2) {
-        MineFragment fragment = new MineFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Override
@@ -49,6 +39,22 @@ public class MineFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mine, container, false);
+        View view =  inflater.inflate(R.layout.fragment_mine, container, false);
+        ButterKnife.bind(this, view);
+        return view;
     }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        testView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), TestView1Activity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+
 }

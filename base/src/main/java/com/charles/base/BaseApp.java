@@ -2,6 +2,8 @@ package com.charles.base;
 
 import android.app.Application;
 
+import com.charles.base.engine.Engine;
+
 /**
  * Created by charles on 2018/8/31.
  */
@@ -18,5 +20,6 @@ public abstract class BaseApp extends Application{
     public void onCreate() {
         super.onCreate();
         sApp = this;
+        Engine.create(this);
     }
 }

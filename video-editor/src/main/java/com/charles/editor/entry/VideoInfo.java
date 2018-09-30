@@ -15,7 +15,7 @@ public class VideoInfo {
     public int width;
     public int height;
     public String videoUrl;
-    public long duration;
+    public int duration;
     public String previewVideoUrl;
     public String videoPath;
 
